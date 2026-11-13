@@ -1,0 +1,18 @@
+2026-11-13 15:03:38,622 | INFO    | ingestion | Generating synthetic data (seed=42)
+2026-11-13 15:03:41,382 | INFO    | ingestion | Ingested users        rows=2010 md5=9c56f742
+2026-11-13 15:03:41,416 | INFO    | ingestion | Ingested items        rows=804 md5=dc5349bc
+2026-11-13 15:03:41,534 | INFO    | ingestion | Ingested interactions rows=54529 md5=0ef482f2
+2026-11-13 15:03:42,666 | INFO    | validation | users        total=2010 valid=1994 invalid=16
+2026-11-13 15:03:42,683 | INFO    | validation | items        total=804 valid=797 invalid=7
+2026-11-13 15:03:42,720 | INFO    | validation | interactions total=54529 valid=52267 invalid=2262
+2026-11-13 15:03:42,809 | INFO    | preparation | Resolved 423 repeated (user,item) pairs (kept latest)
+2026-11-13 15:03:42,867 | INFO    | preparation | Clean data: {'users': 1994, 'items': 797, 'interactions': 51844, 'positive_rate': 0.5987}
+2026-11-13 15:03:43,461 | INFO    | transformation | Split: {'cutoff': '2025-08-12 10:19:41', 'train_rows': 41475, 'test_rows': 10369, 'train_users': 1993, 'catalog_items': 797, 'matrix_shape': [1993, 797], 'matrix_density': 0.02611, 'test_users_unseen_in_train': 5}
+2026-11-13 15:03:43,890 | INFO    | features | Feature tables built: {'user_features': (1994, 9), 'item_features': (797, 9), 'serving_users': 1994}
+2026-11-13 15:03:47,754 | INFO    | training | Trained popularity run_id=e65c4006
+2026-11-13 15:03:47,952 | INFO    | training | Trained item_knn   run_id=d9c15ff4
+2026-11-13 15:03:48,354 | INFO    | training | Trained svd_mf     run_id=cf022364
+2026-11-13 15:03:48,502 | INFO    | evaluation | Evaluating on 1623 users, K=10, catalog=797 items
+2026-11-13 15:03:48,685 | INFO    | evaluation | {'model': 'popularity', 'precision@10': 0.0479, 'recall@10': 0.164, 'ndcg@10': 0.1171, 'coverage': 0.0489, 'diversity': 0.8372, 'rmse': 1.1253, 'mae': 0.9261}
+2026-11-13 15:03:48,945 | INFO    | evaluation | {'model': 'item_knn', 'precision@10': 0.0754, 'recall@10': 0.2238, 'ndcg@10': 0.1725, 'coverage': 0.7604, 'diversity': 0.4238, 'rmse': nan, 'mae': nan}
+2026-11-13 15:03:49,456 | INFO    | evaluation | {'model': 'svd_mf', 'precision@10': 0.088, 'recall@10': 0.238, 'ndcg@10': 0.194, 'coverage': 0.4705, 'diversity': 0.6503, 'rmse': 0.9934, 'mae': 0.7519}

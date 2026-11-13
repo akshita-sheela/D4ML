@@ -1,0 +1,8 @@
+item_id,title,category,release_year,price,error_reason
+242,Item 0242,,2099,30.47,invalid_release_year
+261,Item 0261,Action,2099,22.39,invalid_release_year
+649,Item 0649,Thriller,2099,23.67,invalid_release_year
+687,Item 0687,Drama,2023,13.67,duplicate_item_id
+480,Item 0480,Drama,1998,29.64,duplicate_item_id
+196,Item 0196,Action,2001,17.25,duplicate_item_id
+537,Item 0537,Sci-Fi,2011,10.21,duplicate_item_id

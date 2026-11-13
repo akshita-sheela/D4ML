@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+mlflow.db
+mlruns/
+.prefect/
+.pytest_cache/
+data/processed/*
+data/features/*
+data/raw/*
+models/*.joblib
+models/run_ids.json
+!**/.gitkeep
+.venv/
